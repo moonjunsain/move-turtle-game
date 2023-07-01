@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#turtle {
+    position: absolute;
+}
+
+#target {
+    position: absolute;
+    left: 500px;
+    top: 500px;
+}
+
+#play {
+    font-size: 150%;
+}
