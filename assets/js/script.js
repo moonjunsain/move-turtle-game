@@ -89,6 +89,11 @@ var turtle = {
         if(replay){
             startGame();
         }
+        else {
+            // remove event listerners for turtle
+            document.removeEventListener("keydown", turtle.isTouchingTarget);
+            document.removeEventListener("keydown", turtle.moveTurtle);
+        }
      }
     },
 };
