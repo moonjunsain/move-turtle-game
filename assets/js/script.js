@@ -78,9 +78,9 @@ var turtle = {
         turtleImg.style.left = positionX + "px";
     },
     // checks if the turtle image is touching (overlapping) the target image
+    // p.s. this logic was so hard to figure out lol
     isTouchingTarget: function(){
         console.log("This is working");
-    // this logic was so hard to figure out lol
      if((positionX + 100 >= targetX && positionX <= targetX + 10) && (positionY + 100 >= targetY && positionY <= targetY + 10) ){
         alert("You are there!");
         var replay = confirm("Do you want to play again?");
