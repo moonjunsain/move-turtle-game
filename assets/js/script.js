@@ -10,6 +10,7 @@ var time = document.createElement("p");
 // Might add different levels in future
 var level = 1;
 var timeLeft = 60;
+var timeInterval;
 
 // setting the time (p) element's text
 time.textContent = "Time Left: " + timeLeft;
@@ -35,7 +36,7 @@ targetImg.style.left = targetX + "px";
 
 // Set the time interval function
 function countDown(){
-    var timeInterval = setInterval(function (){
+    timeInterval = setInterval(function (){
         if(timeLeft <= 0){
             clearInterval(timeInterval);
             alert("You are slower than turtle :)");
@@ -83,6 +84,7 @@ var turtle = {
         console.log("This is working");
      if((positionX + 100 >= targetX && positionX <= targetX + 10) && (positionY + 100 >= targetY && positionY <= targetY + 10) ){
         alert("You are there!");
+        clearInterval(timeInterval);
         var replay = confirm("Do you want to play again?");
         if(replay){
             startGame();
